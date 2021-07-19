@@ -12,3 +12,19 @@ Iniziate col riflettere sugli step che dovete eseguire, scrivendoli in italiano 
 Facciamo un passo alla volta e verifichiamo i nostri passi col console.log.
 Quando tutto funziona col console.log possiamo preoccuparci di eseguire in pagina!
  */
+
+//* creazione ogetto singolo
+
+var student = {
+  name: "simone",
+  surname: "de santis",
+  age: "28",
+  fullName: function () {
+    return this.name + " " + this.surname;
+  },
+};
+
+document.getElementById("student-property").innerHTML = student.fullName();
+// *console log ogetto singolo
+
+console.log(student);
