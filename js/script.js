@@ -19,12 +19,13 @@ var student = {
   name: "simone",
   surname: "de santis",
   age: "28",
-  fullName: function () {
-    return this.name + " " + this.surname;
-  },
 };
+for (key in student) {
+  console.log(key);
+  // console.log(student[key]);
+}
+document.getElementById("student-property").innerHTML = "<li>" + student[key] + "</li>";
 
-document.getElementById("student-property").innerHTML = student.fullName();
-// *console log ogetto singolo
+// *console log oggetto singolo
 
-console.log(student);
+// console.log(student);
