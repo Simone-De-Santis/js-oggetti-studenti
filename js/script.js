@@ -20,11 +20,15 @@ var student = {
   surname: "de santis",
   age: "28",
 };
+
+var stringa = "";
+
 for (key in student) {
   console.log(key);
+  stringa += "<li>" + key + " = " + student[key] + "</li>";
   // console.log(student[key]);
 }
-document.getElementById("student-property").innerHTML = "<li>" + student[key] + "</li>";
+document.getElementById("student-property").innerHTML = stringa;
 
 // *console log oggetto singolo
 
