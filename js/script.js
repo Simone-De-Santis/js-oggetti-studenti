@@ -11,25 +11,41 @@ Consigli del giorno:
 Iniziate col riflettere sugli step che dovete eseguire, scrivendoli in italiano sotto forma di commenti
 Facciamo un passo alla volta e verifichiamo i nostri passi col console.log.
 Quando tutto funziona col console.log possiamo preoccuparci di eseguire in pagina!
+Ragazzi il bonus per questo esercizio, solo dopo che avete controllato che funziona tutto, è inserire l'utente tramite input HTML al posto del prompt. Buona lavoro a tutti.
  */
 
-//* creazione ogetto singolo
+//! creazione ogetto singolo
 
 var student = {
   name: "simone",
   surname: "de santis",
-  age: "28",
+  age: 28,
 };
 
-var stringa = "";
-
-for (key in student) {
-  console.log(key);
-  stringa += "<li>" + key + " = " + student[key] + "</li>";
-  // console.log(student[key]);
+var display = document.getElementById("student-property");
+var content = "";
+for (var key in student) {
+  content += "<li>" + key + " : " + student[key] + "</li>";
 }
-document.getElementById("student-property").innerHTML = stringa;
+display.innerHTML = content;
 
-// *console log oggetto singolo
+//! *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+//! creazione classe e stampa in pagina nome e cognome
 
-// console.log(student);
+var classroom = [
+  { name: "simone", surname: "de santis", age: "28" },
+  { name: "agngelo", surname: "de falco", age: "28" },
+  { name: "marco", surname: "de angelis", age: "28", height: "1.80 M" },
+  { name: "fabio", surname: "de michelis", age: "28" },
+  { name: "francesco", surname: "de boris", age: "28" },
+];
+
+//? cicliamo nell'array
+var content2 = "";
+for (var i = 0; i < classroom.length; i++) {
+  var currentStudent = classroom[i];
+  content2 += "<li>" + "<span>Nome :  </span>" + currentStudent.name + "   " + "<span>Cognome :</span>" + currentStudent.surname + "</li>";
+}
+var display = document.getElementById("student-property-2");
+display.innerHTML = content2;
+// //? ************************************************************
